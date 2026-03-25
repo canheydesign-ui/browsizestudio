@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browsize Beauty Studio | Exclusive Güzellik & Kaş Tasarımı</title>
+    
+    <meta name="description" content="Browsize Beauty Studio ile kişiye özel microblading, kaş laminasyonu ve profesyonel güzellik çözümleri. Exclusive hizmet, doğal sonuçlar.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --butter: #FDF5E6; /* Tereyağı Sarısı */
+            --beige: #F5F5DC;  /* Bej */
+            --brown: #4B3621;  /* Koyu Kahve */
+            --soft-brown: #8B735B;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--butter); color: var(--brown); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed; top: 0; width: 100%; height: 80px;
+            background: rgba(253, 245, 230, 0.95); backdrop-filter: blur(10px);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 8%; z-index: 2000; border-bottom: 1px solid rgba(75, 54, 33, 0.05);
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; color: var(--brown); text-decoration: none; letter-spacing: 4px; }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { text-decoration: none; color: var(--brown); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--soft-brown); }
+
+        /* --- HERO --- */
+        .hero {
+            height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;
+            background: linear-gradient(rgba(75, 54, 33, 0.3), rgba(75, 54, 33, 0.3)), 
+                        url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+            color: var(--white);
+        }
+        .hero h1 { font-size: 4.5rem; font-style: italic; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px; }
+
+        /* --- SECTION GENEL --- */
+        section { padding: 120px 8%; }
+        .section-header { text-align: center; margin-bottom: 80px; }
+        .section-header h2 { font-size: 3rem; color: var(--brown); margin-bottom: 15px; }
+        .section-header p { font-style: italic; color: var(--soft-brown); font-size: 1.1rem; }
+
+        /* --- HİZMETLER (OVERVIEW) --- */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .service-card { background: var(--white); padding: 40px; border-radius: 20px; text-align: center; transition: 0.4s; border: 1px solid rgba(75, 54, 33, 0.05); }
+        .service-card:hover { transform: translateY(-10px); background: var(--beige); }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.4rem; }
+
+        /* --- DETAYLI HİZMET SECTIONS --- */
+        .service-detail { display: flex; align-items: center; gap: 80px; border-bottom: 1px solid rgba(75,54,33,0.05); }
+        .service-detail:nth-child(even) { flex-direction: row-reverse; background-color: var(--beige); }
+        .detail-img { flex: 1; border-radius: 40px 0 40px 0; overflow: hidden; height: 500px; box-shadow: 20px 20px 0px var(--brown); }
+        .detail-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .detail-img:hover img { transform: scale(1.05); }
+        .detail-text { flex: 1; }
+        .detail-text h2 { font-size: 2.8rem; margin-bottom: 25px; }
+        .detail-text ul { list-style: none; margin-bottom: 35px; }
+        .detail-text ul li { margin-bottom: 12px; padding-left: 30px; position: relative; }
+        .detail-text ul li::before { content: '✦'; position: absolute; left: 0; color: var(--soft-brown); }
+
+        /* --- BUTTONS --- */
+        .cta-btn { display: inline-block; padding: 18px 40px; background: var(--brown); color: var(--butter); text-decoration: none; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; border: none; cursor: pointer; }
+        .cta-btn:hover { background: var(--soft-brown); transform: scale(1.05); }
+
+        /* --- İLETİŞİM & KONUM --- */
+        .contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; background-color: var(--white); }
+        .contact-form-area { padding: 100px 15%; display: flex; flex-direction: column; justify-content: center; }
+        .map-area { height: 650px; width: 100%; }
+        iframe { width: 100%; height: 100%; border: 0; filter: contrast(1.1) sepia(0.1); }
+
+        /* --- FOOTER --- */
+        footer { background: var(--brown); color: var(--butter); padding: 80px 8% 40px; text-align: center; }
+        .footer-logo { font-size: 2rem; font-family: 'Playfair Display'; margin-bottom: 20px; display: block; }
+        .social-links { margin: 30px 0; }
+        .social-links a { color: var(--butter); margin: 0 15px; text-decoration: none; font-size: 0.9rem; border-bottom: 1px solid transparent; transition: 0.3s; }
+        .social-links a:hover { border-bottom: 1px solid var(--butter); }
+        
+        /* Mobile */
+        @media (max-width: 968px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 3rem; }
+            .service-detail, .service-detail:nth-child(even) { flex-direction: column; padding: 80px 8%; text-align: center; }
+            .contact-section { grid-template-columns: 1fr; }
+            .detail-img { width: 100%; height: 350px; box-shadow: 10px 10px 0px var(--brown); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">BROWSIZE</a>
+        <ul class="nav-links">
+            <li><a href="#hero">Ana Sayfa</a></li>
+            <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+            <li><a href="#iletisim">Bize Ulaşın</a></li>
+            <li><a href="#konum">Konum</a></li>
+        </ul>
+        <a href="#iletisim" class="cta-btn" style="padding: 10px 20px; font-size: 0.7rem;">Randevu Al</a>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div>
+            <p>Sanatla Şekillenen Bakışlar</p>
+            <h1>Browsize Studio</h1>
+            <a href="#hizmetler" class="cta-btn">Keşfetmeye Başla</a>
+        </div>
+    </section>
+
+    <section id="hizmetler">
+        <div class="section-header">
+            <h2>Hizmetlerimiz</h2>
+            <p>Güzelliğinizi uzman ellere emanet edin.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card"><h3>Microblading</h3><p>Doğal kıl tekniği</p></div>
+            <div class="service-card"><h3>Laminasyon</h3><p>Kalkık ve hacimli</p></div>
+            <div class="service-card"><h3>Dudak Vitamini</h3><p>Canlı ve dolgun</p></div>
+            <div class="service-card"><h3>Kirpik Lifting</h3><p>Derin bakışlar</p></div>
+        </div>
+    </section>
+
+    <section id="hizmet1" class="service-detail">
+        <div class="detail-img">
+            <img src="https://images.unsplash.com/photo-1595475038784-bbe439ff41e6?auto=format&fit=crop&q=80&w=800" alt="Microblading">
+        </div>
+        <div class="detail-text">
+            <h2>Microblading 6D</h2>
+            <p>Kaşlarınızdaki asimetriyi ve boşlukları, yüz hatlarınıza uygun altın oran hesaplamalarıyla gideriyoruz.</p>
+            <ul>
+                <li>Kişiye özel pigment analizi</li>
+                <li>Ağrısız konforlu uygulama</li>
+                <li>Doğal ve kalıcı sonuçlar</li>
+            </ul>
+            <a href="#iletisim" class="cta-btn">Detaylı Bilgi Al</a>
+        </div>
+    </section>
+
+    <section id="hizmet2" class="service-detail">
+        <div class="detail-text">
+            <h2>Kaş Laminasyonu</h2>
+            <p>Sert ve aşağı doğru uzan kaşları disipline ederek daha modern ve bakımlı bir forma sokuyoruz.</p>
+            <ul>
+                <li>8 haftaya kadar kalıcılık</li>
+                <li>Kaş vitamin desteği</li>
+                <li>Daha dolgun kaş formu</li>
+            </ul>
+            <a href="#iletisim" class="cta-btn">Bize Ulaşın</a>
+        </div>
+        <div class="detail-img">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=800" alt="Kaş Laminasyonu">
+        </div>
+    </section>
+
+    <section id="hizmet3" class="service-detail">
+        <div class="detail-img">
+            <img src="https://images.unsplash.com/photo-1522337300243-906dfbed4c38?auto=format&fit=crop&q=80&w=800" alt="Dudak Renklendirme">
+        </div>
+        <div class="detail-text">
+            <h2>Dudak Renklendirme</h2>
+            <p>Dudaklarınızın doğal rengini geri kazandırarak her zaman bakımlı görünmesini sağlıyoruz.</p>
+            <ul>
+                <li>Mineral içerikli boyalar</li>
+                <li>Daha net dudak hattı</li>
+                <li>Canlı ve taze görünüm</li>
+            </ul>
+            <a href="#iletisim" class="cta-btn">Randevu Oluştur</a>
+        </div>
+    </section>
+
+    <section class="contact-section" id="iletisim">
+        <div class="contact-form-area">
+            <h2 style="font-family: 'Playfair Display'; font-size: 3rem; margin-bottom: 20px;">Bize Ulaşın</h2>
+            <p style="margin-bottom: 40px;">Exclusive bir hizmet için form doldurun veya bizi doğrudan arayın.</p>
+            
+            <p><strong>Adres:</strong> Güzellik Cad. No: 12, Nişantaşı / İstanbul</p>
+            <p><strong>Telefon:</strong> +90 (555) 000 00 00</p>
+            <p><strong>Email:</strong> hello@browsize.com</p>
+            <br><br>
+            <a href="https://wa.me/905550000000" class="cta-btn" style="text-align: center;">WhatsApp ile Randevu</a>
+        </div>
+        <div class="map-area" id="konum">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.182444520448!2d28.9896791!3d41.047537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAyJzUxLjEiTiAyOMKwNTknMjIuOSJF!5e0!3m2!1str!2str!4v1640000000000!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <span class="footer-logo">BROWSIZE</span>
+        <p>Güzelliğin en zarif hali.</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">TikTok</a>
+        </div>
+        <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 40px;">&copy; 2026 Browsize Beauty Studio. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
