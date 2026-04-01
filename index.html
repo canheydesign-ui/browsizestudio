@@ -37,7 +37,11 @@
             display: flex; justify-content: space-between; align-items: center;
             padding: 0 5%; z-index: 3000;
         }
-        .logo { font-size: 1.4rem; font-weight: 700; color: var(--deep-brown); text-decoration: none; letter-spacing: 6px; }
+        
+        /* Logo CSS Ayarları */
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 40px; width: auto; display: block; }
+        
         .nav-links { display: flex; list-style: none; gap: 40px; }
         .nav-links a { text-decoration: none; color: var(--deep-brown); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; transition: 0.4s; opacity: 0.6; }
         .nav-links a:hover { opacity: 1; }
@@ -88,7 +92,11 @@
 
         /* --- FOOTER --- */
         footer { padding: 100px 10%; background: var(--deep-brown); color: var(--ivory); text-align: center; }
-        .footer-logo { font-size: 2rem; letter-spacing: 10px; margin-bottom: 30px; display: block; }
+        
+        /* Footer Logo CSS Ayarları */
+        .footer-logo { display: inline-block; margin-bottom: 30px; text-decoration: none; }
+        .footer-logo img { height: 60px; width: auto; display: block; }
+        
         .socials a { color: var(--ivory); margin: 0 20px; text-decoration: none; font-size: 0.8rem; opacity: 0.5; transition: 0.3s; }
         .socials a:hover { opacity: 1; }
 
@@ -105,7 +113,9 @@
 <body>
 
     <nav>
-        <a href="#" class="logo">BROWSIZE</a>
+        <a href="#" class="logo">
+            <img src="logo.svg" alt="Browsize Beauty Studio">
+        </a>
         <ul class="nav-links">
             <li><a href="#hizmetler">Hizmetler</a></li>
             <li><a href="#iletisim">Randevu</a></li>
@@ -192,7 +202,9 @@
     </section>
 
     <footer>
-        <span class="footer-logo">BROWSIZE</span>
+        <a href="#" class="footer-logo">
+            <img src="logo-beyaz.svg" alt="Browsize Beauty Studio">
+        </a>
         <div class="socials">
             <a href="#">Instagram</a>
             <a href="#">Pinterest</a>
